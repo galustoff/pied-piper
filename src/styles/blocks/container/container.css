@@ -2,4 +2,5 @@
     margin: 0 auto;
     padding: 0 var(--side-padding);
     max-width: var(--cont-max-width);
+    box-sizing: border-box;
 }
