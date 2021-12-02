@@ -4,4 +4,6 @@
     --light-gray: #eee;
     --dark-gray: #333;
     --black: #000;
+    --cont-max-width: 1219px;
+    --side-padding: 55px;
 }

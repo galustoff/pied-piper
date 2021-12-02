@@ -4,9 +4,17 @@
 
 @import url(../styles/utils/variables.css);
 
+@import url(../styles/blocks/container/container.css);
+
 @import url(../styles/blocks/h1/h1.css);
 @import url(../styles/blocks/h2/h2.css);
 @import url(../styles/blocks/paragraph/);
+
+@import url(../styles/blocks/body/body.css);
+
+@import url(../styles/blocks/header/header.css);
+@import url(../styles/blocks/header/__container/header__container.css);
+@import url(../styles/blocks/header/__link/header__link.css);
 
 @import url(../styles/blocks/hero/__text/hero__text.css);
 
