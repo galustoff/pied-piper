@@ -1,0 +1,10 @@
+.hero__text {
+    max-width: 900px;
+    color: var(--white);
+    font-weight: var(--medium);
+    font-style: italic;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.003em;
+}

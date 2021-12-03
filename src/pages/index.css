@@ -26,6 +26,9 @@
 @import url(../styles/blocks/problem/problem.css);
 @import url(../styles/blocks/problem/__container/problem__container.css);
 
+@import url(../styles/blocks/hero/hero.css);
+@import url(../styles/blocks/hero/__text/hero__text.css);
+
 @import url(../styles/blocks/hero/__text/hero__text.css);
 
 @import url(../styles/blocks/footer/__text/footer__text.css);
