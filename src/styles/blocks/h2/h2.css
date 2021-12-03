@@ -1,0 +1,8 @@
+.h2 {
+    margin-bottom: 16px;
+    color: var(--green);
+    font-weight: var(--medium);
+    font-size: var(--h2-fsz);
+    line-height: var(--h2-lh);
+    text-align: center;
+}

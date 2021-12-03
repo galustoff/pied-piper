@@ -14,10 +14,10 @@
     --h2-fsz: 64px;
     --h2-lh: 75px;
     --p-fsz: 32px;
-    --p-lh: 37.5px;
+    --p-lh: 37px;
 
     /* font weights */
     --regular: 400;
-    --bold: 500;
-    --bolder: 700;
+    --medium: 500;
+    --bold: 700;
 }
