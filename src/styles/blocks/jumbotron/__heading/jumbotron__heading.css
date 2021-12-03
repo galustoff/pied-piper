@@ -1,0 +1,6 @@
+.jumbotron__heading {
+    text-align: center;
+    font-weight: var(--bold);
+    font-size: 72px;
+    line-height: 83px;
+}
