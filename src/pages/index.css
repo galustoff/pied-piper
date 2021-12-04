@@ -1,4 +1,4 @@
-@import url(../vendor/normalize.css);
+@import url(../vendor/zeroing.css);
 
 @import url(../vendor/fonts/fonts.css);
 
@@ -37,6 +37,13 @@
 @import url(../styles/blocks/pipercoin/__logo-wrapper/pipercoin__logo-wrapper.css);
 
 @import url(../styles/blocks/team/team.css);
+@import url(../styles/blocks/team/__container/team__container.css);
+@import url(../styles/blocks/team/__heading/team__heading.css);
+@import url(../styles/blocks/team/__cards/team__cards.css);
+@import url(../styles/blocks/team/__card/team__card.css);
+@import url(../styles/blocks/team/__photo/team__photo.css);
+@import url(../styles/blocks/team/__name/team__name.css);
+@import url(../styles/blocks/team/__position/team__position.css);
 
 @import url(../styles/blocks/footer/footer.css);
 @import url(../styles/blocks/footer/__container/footer__container.css);
