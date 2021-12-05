@@ -1,5 +1,4 @@
 .hero__container {
     max-width: 1000px;
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding: 128px 56px 130px 54px;
 }
