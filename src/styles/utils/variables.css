@@ -1,23 +1,29 @@
 :root {
-    /* colors */
-    --green: #007765;
-    --white: #fff;
-    --light-gray: #eee;
-    --dark-gray: #333;
-    --black: #000;
+  /* colors */
+  --green: #007765;
+  --white: #fff;
+  --light-gray: #eee;
+  --dark-gray: #333;
+  --black: #000;
 
-    /* container sizes */
-    --cont-max-width: 1220px;
-    --side-padding: 55px;
+  /* container sizes */
+  --cont-max-width: 1220px;
+  --side-padding: 55px;
 
-    /* repeating font sizes and line-heights */
-    --h2-fsz: 64px;
-    --h2-lh: 75px;
-    --p-fsz: 32px;
-    --p-lh: 37px;
+  /* repeating font sizes and line heights
+   * for h2, paragraph and footer
+   */
+  --h2-fsz: 64px;
+  --h2-lh: 1.172em;
 
-    /* font weights */
-    --regular: 400;
-    --medium: 500;
-    --bold: 700;
+  --p-fsz: 32px;
+  --p-lh: 1.172em;
+
+  --f-fsz: 18px;
+  --f-lh: 1.185em;
+
+  /* font weights */
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
 }

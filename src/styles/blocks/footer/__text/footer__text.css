@@ -1,5 +1,5 @@
 .footer__text {
-    font-size: 18px;
-    line-height: 1.185em;
+    font-size: var(--f-fsz);
+    line-height: var(--f-lh);
     text-align: center;
 }

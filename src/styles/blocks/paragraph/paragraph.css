@@ -1,4 +1,5 @@
 .paragraph {
+  margin-bottom: 37.5px;
   color: var(--black);
   font-weight: var(--regular);
   font-size: var(--p-fsz);
