@@ -23,6 +23,7 @@
 @import url(../styles/blocks/header/__link/header__link.css);
 
 @import url(../styles/blocks/jumbotron/jumbotron.css);
+@import url(../styles/blocks/jumbotron/__container/jumbotron__container.css);
 @import url(../styles/blocks/jumbotron/__heading/jumbotron__heading.css);
 
 @import url(../styles/blocks/problem/problem.css);

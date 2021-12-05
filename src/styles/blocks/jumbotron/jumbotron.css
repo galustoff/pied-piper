@@ -1,8 +1,4 @@
 .jumbotron {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 403px;
     background-image: url(../../../vendor/images/jumbotron_bg.png);
     background-size: cover;
     background-position: center center;
