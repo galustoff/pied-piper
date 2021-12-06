@@ -1,52 +1,200 @@
-@import url(../vendor/reset.css);
+* {
+  margin: 0;
+  padding: 0;
+}
 
-@import url(../vendor/fonts/fonts.css);
+ul {
+  list-style: none;
+}
 
-@import url(../styles/utils/variables.css);
+.body {
+  font-family: Roboto, sans-serif;
+}
 
-@import url(../styles/blocks/body/body.css);
+.container {
+  margin: 0 auto;
+  padding: 0 55px;
+  max-width: 1220px;
+  box-sizing: border-box;
+}
 
-@import url(../styles/blocks/container/container.css);
+.h2 {
+  margin-bottom: 17px;
+  color: #007765;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.172em;
+  text-align: center;
+}
 
-@import url(../styles/blocks/h2/h2.css);
+.paragraph {
+  margin-bottom: 37.5px;
+  color: #000;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.172em;
+}
+.paragraph_style_italic {
+  font-style: italic;
+}
+.paragraph_style_strong {
+  font-weight: 700;
+}
 
-@import url(../styles/blocks/paragraph/paragraph.css);
-@import url(../styles/blocks/paragraph/_style/paragraph_style_strong.css);
-@import url(../styles/blocks/paragraph/_style/paragraph_style_italic.css);
+.flow-cleaner {
+  clear: both;
+}
 
-@import url(../styles/blocks/flow-cleaner/flow-cleaner.css);
+.header {
+  background-color: #007765;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+.header__container {
+  padding-top: 20px;
+  padding-bottom: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo-wrapper {
+  width: 184px;
+  height: 45px;
+}
+.header__nav {
+  letter-spacing: 0.3px;
+}
+.header__list-item {
+  display: inline-block;
+}
+.header__link {
+  color: inherit;
+  text-decoration: none;
+}
 
-@import url(../styles/blocks/header/header.css);
-@import url(../styles/blocks/header/__container/header__container.css);
-@import url(../styles/blocks/header/__logo-wrapper/header__logo-wrapper.css);
-@import url(../styles/blocks/header/__nav/header__nav.css);
-@import url(../styles/blocks/header/__list-item/header__list-item.css);
-@import url(../styles/blocks/header/__link/header__link.css);
+.jumbotron {
+  background-image: url(../vendor/images/jumbotron_bg.png);
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+}
+.jumbotron__container {
+  padding-top: 161px;
+  padding-bottom: 159px;
+  padding-right: 74px;
+}
+.jumbotron__heading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 83px;
+}
 
-@import url(../styles/blocks/jumbotron/jumbotron.css);
-@import url(../styles/blocks/jumbotron/__container/jumbotron__container.css);
-@import url(../styles/blocks/jumbotron/__heading/jumbotron__heading.css);
+.problem {
+  background-color: #eee;
+}
+.problem__container {
+  padding-top: 47px;
+  padding-bottom: 55px;
+}
+.problem__heading {
+  padding-right: 4px;
+}
 
-@import url(../styles/blocks/problem/problem.css);
-@import url(../styles/blocks/problem/__container/problem__container.css);
-@import url(../styles/blocks/problem/__heading/problem__heading.css);
+.hero {
+  background-image: url(../vendor/images/hero_bg.png);
+  background-position: center center;
+  background-size: cover;
+}
+.hero__container {
+  max-width: 1000px;
+  padding: 128px 56px 130px 54px;
+}
+.hero__text {
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 1.172em;
+  text-align: center;
+}
 
-@import url(../styles/blocks/hero/hero.css);
-@import url(../styles/blocks/hero/__container/hero__container.css);
-@import url(../styles/blocks/hero/__text/hero__text.css);
+.pipercoin {
+  background-color: #fff;
+}
+.pipercoin__container {
+  padding-top: 47px;
+  padding-bottom: 52.5px;
+}
+.pipercoin__logo-wrapper {
+  float: left;
+  margin-right: 48px;
+  width: 115px;
+  height: 115px;
+}
 
-@import url(../styles/blocks/pipercoin/pipercoin.css);
-@import url(../styles/blocks/pipercoin/__container/pipercoin__container.css);
-@import url(../styles/blocks/pipercoin/__logo-wrapper/pipercoin__logo-wrapper.css);
+.team {
+  background-color: #eee;
+}
+.team__container {
+  padding-top: 48px;
+  padding-bottom: 79px;
+}
+.team__cards {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+@media screen and (min-width: 1220px) {
+  .team__cards {
+    justify-content: space-between;
+  }
+}
+.team__card {
+  width: 350px;
+  padding-top: 24px;
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__photo {
+  border-radius: 50%;
+}
+.team__name {
+  padding-top: 12px;
+  padding-bottom: 2px;
+  color: #007765;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.team__position {
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-style: italic;
+}
 
-@import url(../styles/blocks/team/team.css);
-@import url(../styles/blocks/team/__container/team__container.css);
-@import url(../styles/blocks/team/__cards/team__cards.css);
-@import url(../styles/blocks/team/__card/team__card.css);
-@import url(../styles/blocks/team/__photo/team__photo.css);
-@import url(../styles/blocks/team/__name/team__name.css);
-@import url(../styles/blocks/team/__position/team__position.css);
+.footer {
+  background-color: #333;
+  color: #fff;
+}
+.footer__container {
+  padding-top: 48px;
+  padding-bottom: 64px;
+  max-width: 650px;
+}
+.footer__text {
+  font-size: 18px;
+  line-height: 1.185em;
+  text-align: center;
+}
 
-@import url(../styles/blocks/footer/footer.css);
-@import url(../styles/blocks/footer/__container/footer__container.css);
-@import url(../styles/blocks/footer/__text/footer__text.css);
+/*# sourceMappingURL=index.css.map */
