@@ -120,6 +120,10 @@ ul {
   font-size: 48px;
   line-height: 1.172em;
   text-align: center;
+  transition: transform 1s;
+}
+.hero__text:hover {
+  transform: scale(1.2);
 }
 
 .pipercoin {
@@ -162,6 +166,10 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s;
+}
+.team__card:hover {
+  transform: scale(1.2);
 }
 .team__photo {
   border-radius: 50%;
