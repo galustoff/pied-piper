@@ -1,7 +1,14 @@
 .hero
-    background-image: url(../vendor/images/hero_bg.png)
-    background-position: center center
-    background-size: cover
+    overflow: hidden
+
+    &__scaling-block
+        background-image: url(../vendor/images/hero_bg.png)
+        background-position: center center
+        background-size: cover
+        transition: transform 1s ease-out
+
+        &:hover
+            transform: scale(1.1)
 
 
     &__container

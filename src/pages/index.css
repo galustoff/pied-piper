@@ -76,10 +76,17 @@ ul {
 }
 
 .jumbotron {
+  overflow: hidden;
+}
+.jumbotron__scaling-block {
   background-image: url(../vendor/images/jumbotron_bg.png);
   background-size: cover;
   background-position: center center;
   color: #fff;
+  transition: transform 1s ease-out;
+}
+.jumbotron__scaling-block:hover {
+  transform: scale(1.1);
 }
 .jumbotron__container {
   padding-top: 161px;
@@ -105,9 +112,16 @@ ul {
 }
 
 .hero {
+  overflow: hidden;
+}
+.hero__scaling-block {
   background-image: url(../vendor/images/hero_bg.png);
   background-position: center center;
   background-size: cover;
+  transition: transform 1s ease-out;
+}
+.hero__scaling-block:hover {
+  transform: scale(1.1);
 }
 .hero__container {
   max-width: 1000px;
@@ -120,10 +134,6 @@ ul {
   font-size: 48px;
   line-height: 1.172em;
   text-align: center;
-  transition: transform 1s;
-}
-.hero__text:hover {
-  transform: scale(1.2);
 }
 
 .pipercoin {
@@ -166,7 +176,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-out;
 }
 .team__card:hover {
   transform: scale(1.2);
