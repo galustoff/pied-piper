@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.body {
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 55px;
+  max-width: 1220px;
+  box-sizing: border-box;
+}
+
+.h2 {
+  margin-bottom: 17px;
+  color: #007765;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.172em;
+  text-align: center;
+}
+
+.paragraph {
+  margin-bottom: 37.5px;
+  color: #000;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.172em;
+}
+.paragraph_style_italic {
+  font-style: italic;
+}
+.paragraph_style_strong {
+  font-weight: 700;
+}
+
+.flow-cleaner {
+  clear: both;
+}
+
+.header {
+  background-color: #007765;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+.header__container {
+  padding-top: 20px;
+  padding-bottom: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo-wrapper {
+  width: 184px;
+  height: 45px;
+}
+.header__nav {
+  letter-spacing: 0.3px;
+}
+.header__list-item {
+  display: inline-block;
+}
+.header__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.jumbotron {
+  background-image: url(../src/vendor/images/jumbotron_bg.png);
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+}
+.jumbotron__container {
+  padding-top: 161px;
+  padding-bottom: 159px;
+  padding-right: 74px;
+}
+.jumbotron__heading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 83px;
+}
+
+.problem {
+  background-color: #eee;
+}
+.problem__container {
+  padding-top: 47px;
+  padding-bottom: 55px;
+}
+.problem__heading {
+  padding-right: 4px;
+}
+
+.hero {
+  background-image: url(../src/vendor/images/hero_bg.png);
+  background-position: center center;
+  background-size: cover;
+}
+.hero__container {
+  max-width: 1000px;
+  padding: 128px 56px 130px 54px;
+}
+.hero__text {
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 1.172em;
+  text-align: center;
+}
+
+.pipercoin {
+  background-color: #fff;
+}
+.pipercoin__container {
+  padding-top: 47px;
+  padding-bottom: 52.5px;
+}
+.pipercoin__logo-wrapper {
+  float: left;
+  margin-right: 48px;
+  width: 115px;
+  height: 115px;
+}
+
+.team {
+  background-color: #eee;
+}
+.team__container {
+  padding-top: 48px;
+  padding-bottom: 79px;
+}
+.team__cards {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+@media screen and (min-width: 1220px) {
+  .team__cards {
+    justify-content: space-between;
+  }
+}
+.team__card {
+  width: 350px;
+  padding-top: 24px;
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__photo {
+  border-radius: 50%;
+}
+.team__name {
+  padding-top: 12px;
+  padding-bottom: 2px;
+  color: #007765;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.team__position {
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-style: italic;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+}
+.footer__container {
+  padding-top: 48px;
+  padding-bottom: 64px;
+  max-width: 650px;
+}
+.footer__text {
+  font-size: 18px;
+  line-height: 1.185em;
+  text-align: center;
+}
+
+/*# sourceMappingURL=test_index.css.map */

@@ -1,4 +1,4 @@
-@import url(../vendor/zeroing.css);
+@import url(../vendor/reset.css);
 
 @import url(../vendor/fonts/fonts.css);
 
@@ -9,6 +9,7 @@
 @import url(../styles/blocks/container/container.css);
 
 @import url(../styles/blocks/h2/h2.css);
+
 @import url(../styles/blocks/paragraph/paragraph.css);
 @import url(../styles/blocks/paragraph/_style/paragraph_style_strong.css);
 @import url(../styles/blocks/paragraph/_style/paragraph_style_italic.css);
