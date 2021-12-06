@@ -34,10 +34,10 @@ ul {
   font-size: 32px;
   line-height: 1.172em;
 }
-.paragraph_style_italic {
+.paragraph_text-style_italic {
   font-style: italic;
 }
-.paragraph_style_strong {
+.paragraph_text-style_strong {
   font-weight: 700;
 }
 
