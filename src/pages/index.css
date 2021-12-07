@@ -18,6 +18,17 @@ ul {
   box-sizing: border-box;
 }
 
+.scaling-block {
+  background-size: cover;
+  background-position: center center;
+  transition: transform ease-out;
+  transition-duration: 1.5s;
+}
+.scaling-block:hover {
+  transform: scale(1.1);
+  transition-duration: 3s;
+}
+
 .h2 {
   margin-bottom: 17px;
   color: #007765;
@@ -80,13 +91,6 @@ ul {
 }
 .jumbotron__scaling-block {
   background-image: url(../vendor/images/jumbotron_bg.png);
-  background-size: cover;
-  background-position: center center;
-  color: #fff;
-  transition: transform 1s ease-out;
-}
-.jumbotron__scaling-block:hover {
-  transform: scale(1.1);
 }
 .jumbotron__container {
   padding-top: 161px;
@@ -94,6 +98,7 @@ ul {
   padding-right: 74px;
 }
 .jumbotron__heading {
+  color: #fff;
   text-align: center;
   font-weight: 500;
   font-size: 72px;
@@ -116,12 +121,6 @@ ul {
 }
 .hero__scaling-block {
   background-image: url(../vendor/images/hero_bg.png);
-  background-position: center center;
-  background-size: cover;
-  transition: transform 1s ease-out;
-}
-.hero__scaling-block:hover {
-  transform: scale(1.1);
 }
 .hero__container {
   max-width: 1000px;
