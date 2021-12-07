@@ -133,79 +133,7 @@
       <div class="container team__container">
         <h2 class="h2 team__heading">The Team</h2>
 
-        <ul class="team__cards">
-          <li class="team__card">
-            <img
-              src="./vendor/images/richard.png"
-              alt="Richard Hendricks photo"
-              class="team__photo"
-              width="168"
-              height="168"
-            />
-            <span class="team__name">Richard Hendricks</span>
-            <span class="team__position">Founder & CEO</span>
-          </li>
-
-          <li class="team__card">
-            <img
-              src="./vendor/images/dinesh.png"
-              alt="Dinesh Chugtai photo"
-              class="team__photo"
-              width="168"
-              height="168"
-            />
-            <span class="team__name">Dinesh Chugtai</span>
-            <span class="team__position">Senior Programmer</span>
-          </li>
-
-          <li class="team__card">
-            <img
-              src="./vendor/images/gilfoyle.png"
-              alt="Bertram Gilfoyle photo"
-              class="team__photo"
-              width="168"
-              height="168"
-            />
-            <span class="team__name">Bertram Gilfoyle</span>
-            <span class="team__position">Chief Systems Architect</span>
-          </li>
-
-          <li class="team__card">
-            <img
-              src="./vendor/images/jared.png"
-              alt="Jared Dunn photo"
-              class="team__photo"
-              width="168"
-              height="168"
-            />
-            <span class="team__name">Jared Dunn</span>
-            <span class="team__position">Chief Operating Officer</span>
-          </li>
-
-          <li class="team__card">
-            <img
-              src="./vendor/images/monica.png"
-              alt="Monica Hall photo"
-              class="team__photo"
-              width="168"
-              height="168"
-            />
-            <span class="team__name">Monica Hall</span>
-            <span class="team__position">Chief Financial Officer</span>
-          </li>
-
-          <li class="team__card">
-            <img
-              src="./vendor/images/head.png"
-              alt="Nelson Bighetti photo"
-              class="team__photo"
-              width="168"
-              height="168"
-            />
-            <span class="team__name">Nelson Bighetti</span>
-            <span class="team__position">Majority Investor</span>
-          </li>
-        </ul>
+        <ul class="team__cards"></ul>
       </div>
     </section>
 
@@ -220,11 +148,13 @@
     </footer>
 
     <template id="team__card">
-      <li class="team__card person">
-        <div class="person__photo"></div>
-        <h4 class="person__heading"></h4>
-        <div class="person__role"></div>
+      <li class="team__card">
+        <img class="team__photo" src="" alt="" width="168" height="168" />
+        <span class="team__name"></span>
+        <span class="team__position"></span>
       </li>
     </template>
+
+    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>
