@@ -39,6 +39,7 @@ ul {
 
 .body {
   font-family: Roboto, sans-serif;
+  position: relative;
 }
 
 .container {
@@ -53,12 +54,12 @@ ul {
   background-position: center center;
   transition: transform linear;
   transition-duration: 1.5s;
-  transition-delay: 1.5s;
+  transition-delay: 3s;
 }
 .scaling-block:hover {
   transform: scale(1.1);
   transition: transform 3s ease-out;
-  transition-delay: none;
+  transition-delay: 0.5s;
 }
 
 .h2 {
@@ -89,6 +90,9 @@ ul {
 }
 
 .header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
   background-color: #007765;
   color: #fff;
   font-weight: 500;
@@ -119,6 +123,7 @@ ul {
 }
 
 .jumbotron {
+  padding-top: 84px;
   overflow: hidden;
 }
 .jumbotron__scaling-block {
