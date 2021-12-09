@@ -1,9 +1,11 @@
 .scaling-block
     background-size: cover
     background-position: center center
-    transition: transform ease-out
+    transition: transform linear
     transition-duration: 1.5s
+    transition-delay: 1.5s
 
     &:hover
         transform: scale(1.1)
-        transition-duration: 3s
+        transition: transform 3s ease-out
+        transition-delay: none
