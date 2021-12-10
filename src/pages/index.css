@@ -223,11 +223,15 @@ ul {
   padding-top: 24px;
   padding-bottom: 28px;
   display: flex;
+  justify-content: center;
+}
+.team__card-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease-out;
 }
-.team__card:hover {
+.team__card-container:hover {
   transform: scale(1.2);
 }
 .team__photo {
