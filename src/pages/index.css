@@ -39,7 +39,6 @@ ul {
 
 .body {
   font-family: Roboto, sans-serif;
-  position: relative;
 }
 
 .container {
@@ -92,10 +91,10 @@ ul {
 .header-block__nest {
   height: 84px;
 }
-.header-block__wrapper {
+.header-block__header-wrapper {
   position: static;
 }
-.header-block__wrapper_dynamic {
+.header-block__header-wrapper_dynamic {
   position: fixed;
   z-index: 1;
   top: -84px;
@@ -103,7 +102,7 @@ ul {
   height: 168px;
   padding-top: 0;
 }
-.header-block__wrapper_dynamic:hover {
+.header-block__header-wrapper_dynamic:hover {
   padding-top: 84px;
 }
 
