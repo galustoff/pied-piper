@@ -75,6 +75,15 @@ ul {
   clear: both;
 }
 
+.label {
+  position: relative;
+}
+.label__tail {
+  position: absolute;
+  width: 100%;
+  top: -84px;
+}
+
 .header-block__nest {
   height: 84px;
 }
