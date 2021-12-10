@@ -4,43 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./vendor/images/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./vendor/images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Pied Piper</title>
   </head>
   <body class="body">
-    <header class="header">
-      <div class="container header__container">
-        <div class="header__logo-wrapper">
-          <a href="#">
-            <img
-              src="./vendor/images/logo.svg"
-              width="184"
-              height="45"
-              alt="page logo"
-            />
-          </a>
+    <section class="header-block">
+      <div class="header-block__nest">
+        <div class="header-block__wrapper">
+          <header class="header">
+            <div class="container header__container">
+              <div class="header__logo-wrapper">
+                <a href="#">
+                  <img
+                    src="./vendor/images/logo.svg"
+                    width="184"
+                    height="45"
+                    alt="page logo"
+                  />
+                </a>
+              </div>
+
+              <nav class="header__nav">
+                <ul>
+                  <li class="header__list-item">
+                    <a href="#" class="header__link">the problem</a>
+                    <span class="header__delimiter">|</span>
+                  </li>
+
+                  <li class="header__list-item">
+                    <a href="#" class="header__link">PiedPiperCoin</a>
+                    <span class="header__delimiter">|</span>
+                  </li>
+
+                  <li class="header__list-item">
+                    <a href="#" class="header__link">the team</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
         </div>
-
-        <nav class="header__nav">
-          <ul>
-            <li class="header__list-item">
-              <a href="#" class="header__link">the problem</a>
-              <span class="header__delimiter">|</span>
-            </li>
-
-            <li class="header__list-item">
-              <a href="#" class="header__link">PiedPiperCoin</a>
-              <span class="header__delimiter">|</span>
-            </li>
-
-            <li class="header__list-item">
-              <a href="#" class="header__link">the team</a>
-            </li>
-          </ul>
-        </nav>
       </div>
-    </header>
+    </section>
 
     <section class="jumbotron">
       <div class="scaling-block jumbotron__scaling-block">

@@ -89,10 +89,11 @@ ul {
   clear: both;
 }
 
+.header-block__nest {
+  height: 84px;
+}
+
 .header {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
   background-color: #007765;
   color: #fff;
   font-weight: 500;
@@ -123,7 +124,6 @@ ul {
 }
 
 .jumbotron {
-  padding-top: 84px;
   overflow: hidden;
 }
 .jumbotron__scaling-block {
