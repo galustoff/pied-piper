@@ -48,19 +48,6 @@ ul {
   box-sizing: border-box;
 }
 
-.scaling-block {
-  background-size: cover;
-  background-position: center center;
-  transition: transform linear;
-  transition-duration: 1.5s;
-  transition-delay: 3s;
-}
-.scaling-block:hover {
-  transform: scale(1.1);
-  transition: transform 3s ease-out;
-  transition-delay: 0.5s;
-}
-
 .h2 {
   margin-bottom: 17px;
   color: #007765;
@@ -138,10 +125,9 @@ ul {
 }
 
 .jumbotron {
-  overflow: hidden;
-}
-.jumbotron__scaling-block {
   background-image: url(../vendor/images/jumbotron_bg.png);
+  background-size: cover;
+  background-position: center center;
 }
 .jumbotron__container {
   padding-top: 161px;
@@ -168,10 +154,9 @@ ul {
 }
 
 .hero {
-  overflow: hidden;
-}
-.hero__scaling-block {
   background-image: url(../vendor/images/hero_bg.png);
+  background-size: cover;
+  background-position: center center;
 }
 .hero__container {
   max-width: 1000px;
