@@ -1,8 +1,8 @@
 export function setOffsetBell(checkpoint, callback) {
-    let offsetLessCheckpoint = (window.scrollY < checkpoint * 2);
+    let offsetLessCheckpoint = (window.scrollY < checkpoint);
 
     return function() {
-        if ((window.scrollY < checkpoint * 2) !== offsetLessCheckpoint) {
+        if ((window.scrollY < checkpoint) !== offsetLessCheckpoint) {
             callback();
             offsetLessCheckpoint = !offsetLessCheckpoint;
         }

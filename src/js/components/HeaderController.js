@@ -10,6 +10,10 @@ export class HeaderController {
     }
 
     start() {
+        if (window.scrollY > this._checkPoint) {
+            this._wrapper.classList.add(this._dynamicClass);
+        }
+
         window.addEventListener('scroll', setOffsetBell(this._checkPoint, this._callBack));
     }
 }
