@@ -1,8 +1,3 @@
-export const headerConfig = {    
-    wrapperSelector: '.header-block__header-wrapper',
-    checkpoint: 84,
-    dynamicClass: 'header-block__header-wrapper_dynamic'
-}
 
 export const persons = [
     {

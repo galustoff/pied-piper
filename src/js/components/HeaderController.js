@@ -1,19 +1,17 @@
-import { headerConfig } from "../utils/constants.js";
 import { setOffsetBell, toggleClassName } from "../utils/utils.js";
 
 export class HeaderController {
     constructor() {
-        this._wrapper = document.querySelector(headerConfig.wrapperSelector);
-        this._checkPoint = headerConfig.checkpoint;
-        this._dynamicClass = headerConfig.dynamicClass;
-        this._callBack = toggleClassName(this._wrapper, this._dynamicClass);
+        this._wrapper = document.querySelector('.header-block__header-wrapper');
+        this._smoothClass = 'header-block__header-wrapper_smooth-slide',
+        this._callBack = toggleClassName(this._wrapper, this._smoothClass),
+        this._offsetBell = setOffsetBell(84, this._callBack);
     }
 
     start() {
-        if (window.scrollY > this._checkPoint) {
-            this._wrapper.classList.add(this._dynamicClass);
-        }
-
-        window.addEventListener('scroll', setOffsetBell(this._checkPoint, this._callBack));
+        if (window.scrollY > 84)
+            this._wrapper.classList.add(this._smoothClass);
+        
+        window.addEventListener('scroll', this._offsetBell);
     }
 }
