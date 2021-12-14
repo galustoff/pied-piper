@@ -1,4 +1,4 @@
-export function setOffsetBell(checkpoint, callback) {
+export function getOffsetHandler(checkpoint, callback) {
     let offsetLessCheckpoint = (window.scrollY < checkpoint);
 
     return function() {

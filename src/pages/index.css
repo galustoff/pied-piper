@@ -84,9 +84,8 @@ ul {
   top: -84px;
 }
 
-.header-block__nest {
+.header-block {
   height: 84px;
-  background-color: #007765;
 }
 .header-block__header-wrapper {
   position: fixed;
@@ -95,10 +94,10 @@ ul {
   width: 100%;
   height: 168px;
   padding-top: 84px;
-  transition: padding-top 0.3s ease-out;
 }
 .header-block__header-wrapper_smooth-slide {
   padding-top: 0;
+  transition: padding-top 0.3s ease-out;
 }
 .header-block__header-wrapper_smooth-slide:hover {
   padding-top: 84px;

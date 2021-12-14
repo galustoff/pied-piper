@@ -1,20 +1,17 @@
 .header-block
-
-    &__nest
-        height: $header-height
-        background-color: $green
+    height: $header-height
 
     &__header-wrapper
         position: fixed
         z-index: 1
         top: -$header-height
         width: 100%
-        height: $header-height *2
+        height: $header-height * 2
         padding-top: $header-height
-        transition: padding-top 0.3s ease-out
 
         &_smooth-slide
             padding-top: 0
+            transition: padding-top 0.3s ease-out
 
             &:hover
                 padding-top: $header-height
