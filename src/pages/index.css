@@ -84,25 +84,6 @@ ul {
   top: -84px;
 }
 
-.header-block {
-  height: 84px;
-}
-.header-block__header-wrapper {
-  position: fixed;
-  z-index: 1;
-  top: -84px;
-  width: 100%;
-  height: 168px;
-  padding-top: 84px;
-}
-.header-block__header-wrapper_smooth-slide {
-  padding-top: 0;
-  transition: padding-top 0.3s ease-out;
-}
-.header-block__header-wrapper_smooth-slide:hover {
-  padding-top: 84px;
-}
-
 .header {
   background-color: #007765;
   color: #fff;
@@ -110,6 +91,9 @@ ul {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.01em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .header__container {
   padding-top: 20px;

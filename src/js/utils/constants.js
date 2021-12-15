@@ -1,9 +1,3 @@
-export const headerConfig = {
-    wrapperSelector: '.header-block__header-wrapper',
-    smoothClass: 'header-block__header-wrapper_smooth-slide',
-    headerHeight: 84,
-}
-
 export const persons = [
     {
         photo: './vendor/images/richard.png',
