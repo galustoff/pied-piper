@@ -28,15 +28,24 @@
             display: block
             letter-spacing: 0.3px
         
+    &__list_mobile
+        display: flex
+        flex-direction: column
 
     &__list-item
         display: inline-block
+
+        &_mobile
+            text-align: right
+    
+    &__delimiter_mobile
+        display: none
 
     &__link
         color: inherit
         text-decoration: none
     
-    &__burger
+    &__burger-btn
         width: 45px
         height: 35px
         display: flex
@@ -45,10 +54,10 @@
         cursor: pointer
     
     @media screen and (min-width: 810px)
-        &__burger
+        &__burger-btn
             display: none
     
-    &__burger-line
+    &__burger-btn-line
         height: 6px
         border-radius: 2px
         background-color: $light-gray

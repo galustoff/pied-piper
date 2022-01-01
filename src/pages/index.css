@@ -116,14 +116,24 @@ ul {
     letter-spacing: 0.3px;
   }
 }
+.header__list_mobile {
+  display: flex;
+  flex-direction: column;
+}
 .header__list-item {
   display: inline-block;
+}
+.header__list-item_mobile {
+  text-align: right;
+}
+.header__delimiter_mobile {
+  display: none;
 }
 .header__link {
   color: inherit;
   text-decoration: none;
 }
-.header__burger {
+.header__burger-btn {
   width: 45px;
   height: 35px;
   display: flex;
@@ -132,11 +142,11 @@ ul {
   cursor: pointer;
 }
 @media screen and (min-width: 810px) {
-  .header__burger {
+  .header__burger-btn {
     display: none;
   }
 }
-.header__burger-line {
+.header__burger-btn-line {
   height: 6px;
   border-radius: 2px;
   background-color: #eee;
