@@ -21,7 +21,13 @@
         height: 45px
 
     &__nav
-        letter-spacing: 0.3px
+        display: none
+    
+    @media screen and (min-width: 810px)
+        &__nav
+            display: block
+            letter-spacing: 0.3px
+        
 
     &__list-item
         display: inline-block
@@ -29,3 +35,20 @@
     &__link
         color: inherit
         text-decoration: none
+    
+    &__burger
+        width: 45px
+        height: 35px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        cursor: pointer
+    
+    @media screen and (min-width: 810px)
+        &__burger
+            display: none
+    
+    &__burger-line
+        height: 6px
+        border-radius: 2px
+        background-color: $light-gray

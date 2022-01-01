@@ -107,7 +107,13 @@ ul {
   height: 45px;
 }
 .header__nav {
-  letter-spacing: 0.3px;
+  display: none;
+}
+@media screen and (min-width: 810px) {
+  .header__nav {
+    display: block;
+    letter-spacing: 0.3px;
+  }
 }
 .header__list-item {
   display: inline-block;
@@ -115,6 +121,24 @@ ul {
 .header__link {
   color: inherit;
   text-decoration: none;
+}
+.header__burger {
+  width: 45px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+@media screen and (min-width: 810px) {
+  .header__burger {
+    display: none;
+  }
+}
+.header__burger-line {
+  height: 6px;
+  border-radius: 2px;
+  background-color: #eee;
 }
 
 .jumbotron {
