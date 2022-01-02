@@ -7,13 +7,6 @@ export class Header {
         this._headerList = this._header.querySelector(`.${headerConfig.listClass}`);
         this._headerListItems = Array.from(this._header.querySelectorAll(`.${headerConfig.listItemClass}`));
         this._headerDelimiters = Array.from(this._header.querySelectorAll(`.${headerConfig.delimiterClass}`));
-
-        this._showMenu = () => {
-            this._hideBurger();
-            this._showLinks();
-            this._hideLogo();
-            this._showCloseBtn();
-        }
     }
 
     init() {
@@ -23,7 +16,16 @@ export class Header {
     _setHandlers() {
         document
         .querySelector(`.${headerConfig.burgerBtnClass}`)
-        .addEventListener('click', this._showMenu);
+        .addEventListener('click', () => {
+            this._showMenu();
+        });
+    }
+
+    _showMenu() {
+        this._hideBurger();
+        this._showLinks();
+        this._hideLogo();
+        this._showCloseBtn();
     }
 
     _hideBurger() {
