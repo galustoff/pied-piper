@@ -1,3 +1,12 @@
+export const headerConfig = {
+    headerSel: '.header',
+    listSel: '.header__list',
+    listItemSel: '.header__list-item',
+    delimiterSel: '.header__delimiter',
+    mobileMod: '_mobile',
+    burgerBtnSel: '.header__burger-btn',
+};
+
 export const persons = [
     {
         photo: './vendor/images/richard.png',
