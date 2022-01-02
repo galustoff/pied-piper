@@ -109,11 +109,14 @@ ul {
 }
 .header__nav {
   display: none;
+  letter-spacing: 0.3px;
+}
+.header__nav_mobile {
+  display: block;
 }
 @media screen and (min-width: 810px) {
   .header__nav {
     display: block;
-    letter-spacing: 0.3px;
   }
 }
 .header__list_mobile {
@@ -140,6 +143,9 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+}
+.header__burger-btn_clicked {
+  display: none;
 }
 @media screen and (min-width: 810px) {
   .header__burger-btn {

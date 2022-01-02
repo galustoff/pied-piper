@@ -1,10 +1,12 @@
 export const headerConfig = {
     headerSel: '.header',
-    listSel: '.header__list',
-    listItemSel: '.header__list-item',
-    delimiterSel: '.header__delimiter',
+    navClass: 'header__nav',
+    listClass: 'header__list',
+    listItemClass: 'header__list-item',
+    delimiterClass: 'header__delimiter',
     mobileMod: '_mobile',
-    burgerBtnSel: '.header__burger-btn',
+    clickedMod: '_clicked',
+    burgerBtnClass: 'header__burger-btn',
 };
 
 export const persons = [

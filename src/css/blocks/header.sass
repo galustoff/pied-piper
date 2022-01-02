@@ -22,11 +22,14 @@
 
     &__nav
         display: none
-    
+        letter-spacing: 0.3px
+
+        &_mobile
+            display: block
+            
     @media screen and (min-width: 810px)
         &__nav
             display: block
-            letter-spacing: 0.3px
         
     &__list_mobile
         display: flex
@@ -52,6 +55,9 @@
         flex-direction: column
         justify-content: space-between
         cursor: pointer
+
+        &_clicked
+            display: none
     
     @media screen and (min-width: 810px)
         &__burger-btn
