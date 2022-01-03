@@ -39,7 +39,7 @@ ul {
 
 .body {
   font-family: Roboto, sans-serif;
-  min-width: 520px;
+  min-width: 420px;
 }
 
 .container {
@@ -219,6 +219,18 @@ ul {
   height: 115px;
 }
 
+.pipercoin__h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 520px) {
+  .pipercoin__h2 {
+    overflow: visible;
+    white-space: normal;
+  }
+}
 .team {
   background-color: #eee;
 }
