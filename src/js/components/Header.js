@@ -18,6 +18,12 @@ export class Header {
             .addEventListener('click', () => {
                 this._showMenu();
             });
+        
+        document
+            .querySelector(`.${headerConfig.closeBtnClass}`)
+            .addEventListener('click', () => {
+                this._hideMenu();
+            })
     }
 
     _showMenu() {
@@ -33,6 +39,12 @@ export class Header {
             .classList.add(headerConfig.burgerBtnClass + headerConfig.clickedMod);
     }
 
+    _showBurger() {
+        document
+            .querySelector(`.${headerConfig.burgerBtnClass}`)
+            .classList.remove(headerConfig.burgerBtnClass + headerConfig.clickedMod);
+    }
+
     _showLinks() {
         this._headerDelimiters
             .forEach(e => e.classList.add(headerConfig.delimiterClass + headerConfig.mobileMod));
@@ -42,10 +54,25 @@ export class Header {
         this._headerNav.classList.add(headerConfig.navClass + headerConfig.mobileMod);
     }
 
+    _hideLinks() {
+        this._headerDelimiters
+            .forEach(e => e.classList.remove(headerConfig.delimiterClass + headerConfig.mobileMod));
+
+        this._headerList.classList.remove(headerConfig.listClass + headerConfig.mobileMod);
+
+        this._headerNav.classList.remove(headerConfig.navClass + headerConfig.mobileMod);
+    }
+
     _hideLogo() {
         document
             .querySelector(`.${headerConfig.logoClass}`)
             .classList.add(headerConfig.logoClass + headerConfig.mobileMod);
+    }
+
+    _showLogo() {
+        document
+            .querySelector(`.${headerConfig.logoClass}`)
+            .classList.remove(headerConfig.logoClass + headerConfig.mobileMod);
     }
 
     _showCloseBtn() {
@@ -54,9 +81,16 @@ export class Header {
             classList.add(headerConfig.closeBtnClass + headerConfig.mobileMod);
     }
 
-    _setHandleBtnClick(btnClass) {
-        return function() {
-            this.classList.add(btnClass.concat(headerConfig.clickedMod));
-        }
+    _hideCloseBtn() {
+        document
+            .querySelector(`.${headerConfig.closeBtnClass}`).
+            classList.remove(headerConfig.closeBtnClass + headerConfig.mobileMod);
+    }
+
+    _hideMenu() {
+        this._hideCloseBtn();
+        this._hideLinks();
+        this._showLogo();
+        this._showBurger();
     }
 }
