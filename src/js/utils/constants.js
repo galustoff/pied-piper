@@ -1,12 +1,13 @@
 export const headerConfig = {
     headerSel: '.header',
+    logoClass: 'header__logo-wrapper',
     navClass: 'header__nav',
     listClass: 'header__list',
-    listItemClass: 'header__list-item',
     delimiterClass: 'header__delimiter',
     mobileMod: '_mobile',
     clickedMod: '_clicked',
     burgerBtnClass: 'header__burger-btn',
+    closeBtnClass: 'header__close-btn',
 };
 
 export const persons = [

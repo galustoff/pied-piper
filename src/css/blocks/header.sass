@@ -20,6 +20,9 @@
         width: 184px
         height: 45px
 
+        &_mobile
+            display: none
+
     &__nav
         display: none
         letter-spacing: 0.3px
@@ -37,9 +40,6 @@
 
     &__list-item
         display: inline-block
-
-        &_mobile
-            text-align: right
     
     &__delimiter_mobile
         display: none
@@ -67,3 +67,22 @@
         height: 6px
         border-radius: 2px
         background-color: $light-gray
+    
+    &__close-btn
+        display: none
+        width: 45px
+        height: 45px
+        background-color: $light-gray
+
+        &_mobile
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr
+            grid-gap: 5px
+            transform: rotate(45deg)
+            border-radius: 50%
+            cursor: pointer
+            align-self: flex-start
+    
+    &__close-btn-square
+        background-color: $green

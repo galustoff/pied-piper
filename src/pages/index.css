@@ -107,6 +107,9 @@ ul {
   width: 184px;
   height: 45px;
 }
+.header__logo-wrapper_mobile {
+  display: none;
+}
 .header__nav {
   display: none;
   letter-spacing: 0.3px;
@@ -125,9 +128,6 @@ ul {
 }
 .header__list-item {
   display: inline-block;
-}
-.header__list-item_mobile {
-  text-align: right;
 }
 .header__delimiter_mobile {
   display: none;
@@ -156,6 +156,25 @@ ul {
   height: 6px;
   border-radius: 2px;
   background-color: #eee;
+}
+.header__close-btn {
+  display: none;
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+}
+.header__close-btn_mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.header__close-btn-square {
+  background-color: #007765;
 }
 
 .jumbotron {

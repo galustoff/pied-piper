@@ -5,7 +5,6 @@ export class Header {
         this._header = document.querySelector(headerConfig.headerSel);
         this._headerNav = this._header.querySelector(`.${headerConfig.navClass}`);
         this._headerList = this._header.querySelector(`.${headerConfig.listClass}`);
-        this._headerListItems = Array.from(this._header.querySelectorAll(`.${headerConfig.listItemClass}`));
         this._headerDelimiters = Array.from(this._header.querySelectorAll(`.${headerConfig.delimiterClass}`));
     }
 
@@ -15,33 +14,28 @@ export class Header {
 
     _setHandlers() {
         document
-        .querySelector(`.${headerConfig.burgerBtnClass}`)
-        .addEventListener('click', () => {
-            this._showMenu();
-        });
+            .querySelector(`.${headerConfig.burgerBtnClass}`)
+            .addEventListener('click', () => {
+                this._showMenu();
+            });
     }
 
     _showMenu() {
         this._hideBurger();
-        this._showLinks();
         this._hideLogo();
+        this._showLinks();
         this._showCloseBtn();
     }
 
     _hideBurger() {
         document
-        .querySelector(`.${headerConfig.burgerBtnClass}`)
-        .classList.add(headerConfig.burgerBtnClass + headerConfig.clickedMod);
+            .querySelector(`.${headerConfig.burgerBtnClass}`)
+            .classList.add(headerConfig.burgerBtnClass + headerConfig.clickedMod);
     }
 
     _showLinks() {
-        console.log('show links');
-
         this._headerDelimiters
             .forEach(e => e.classList.add(headerConfig.delimiterClass + headerConfig.mobileMod));
-        
-        this._headerListItems
-            .forEach(e => e.classList.add(headerConfig.listItemClass + headerConfig.mobileMod));
 
         this._headerList.classList.add(headerConfig.listClass + headerConfig.mobileMod);
 
@@ -49,11 +43,15 @@ export class Header {
     }
 
     _hideLogo() {
-        console.log('hide logo');
+        document
+            .querySelector(`.${headerConfig.logoClass}`)
+            .classList.add(headerConfig.logoClass + headerConfig.mobileMod);
     }
 
     _showCloseBtn() {
-        console.log('show clsbtn');
+        document
+            .querySelector(`.${headerConfig.closeBtnClass}`).
+            classList.add(headerConfig.closeBtnClass + headerConfig.mobileMod);
     }
 
     _setHandleBtnClick(btnClass) {
