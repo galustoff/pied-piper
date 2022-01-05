@@ -117,7 +117,7 @@ ul {
   display: none;
 }
 @media screen and (min-width: 810px) {
-  .header__nav {
+  .header__list {
     display: block;
   }
 }
