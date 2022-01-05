@@ -1,11 +1,10 @@
 export const headerConfig = {
     headerSel: '.header',
+    hidingClass: 'header__hidden-element',
+    visibleBlockClass: 'header__visible-block',
     logoClass: 'header__logo-wrapper',
     navClass: 'header__nav',
-    listClass: 'header__list',
     delimiterClass: 'header__delimiter',
-    mobileMod: '_mobile',
-    clickedMod: '_clicked',
     burgerBtnClass: 'header__burger-btn',
     closeBtnClass: 'header__close-btn',
 };

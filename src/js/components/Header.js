@@ -3,9 +3,10 @@ import { headerConfig } from "../utils/constants.js";
 export class Header {
     constructor() {
         this._header = document.querySelector(headerConfig.headerSel);
-        this._headerNav = this._header.querySelector(`.${headerConfig.navClass}`);
-        this._headerList = this._header.querySelector(`.${headerConfig.listClass}`);
-        this._headerDelimiters = Array.from(this._header.querySelectorAll(`.${headerConfig.delimiterClass}`));
+        this._nav = this._header.querySelector(`.${headerConfig.navClass}`);
+        this._logo = this._header.querySelector(`.${headerConfig.logoClass}`);
+        this._burgerBtn = this._header.querySelector(`.${headerConfig.burgerBtnClass}`);
+        this._closeBtn = this._header.querySelector(`.${headerConfig.closeBtnClass}`);
     }
 
     init() {
@@ -13,17 +14,13 @@ export class Header {
     }
 
     _setHandlers() {
-        document
-            .querySelector(`.${headerConfig.burgerBtnClass}`)
-            .addEventListener('click', () => {
-                this._showMenu();
-            });
-        
-        document
-            .querySelector(`.${headerConfig.closeBtnClass}`)
-            .addEventListener('click', () => {
-                this._hideMenu();
-            })
+        this._burgerBtn.addEventListener("click", () => {
+            this._showMenu();
+        });
+
+        this._closeBtn.addEventListener("click", () => {
+            this._hideMenu();
+        });
     }
 
     _showMenu() {
@@ -33,64 +30,42 @@ export class Header {
         this._showCloseBtn();
     }
 
-    _hideBurger() {
-        document
-            .querySelector(`.${headerConfig.burgerBtnClass}`)
-            .classList.add(headerConfig.burgerBtnClass + headerConfig.clickedMod);
-    }
-
-    _showBurger() {
-        document
-            .querySelector(`.${headerConfig.burgerBtnClass}`)
-            .classList.remove(headerConfig.burgerBtnClass + headerConfig.clickedMod);
-    }
-
-    _showLinks() {
-        this._headerDelimiters
-            .forEach(e => e.classList.add(headerConfig.delimiterClass + headerConfig.mobileMod));
-
-        this._headerList.classList.add(headerConfig.listClass + headerConfig.mobileMod);
-
-        this._headerNav.classList.add(headerConfig.navClass + headerConfig.mobileMod);
-    }
-
-    _hideLinks() {
-        this._headerDelimiters
-            .forEach(e => e.classList.remove(headerConfig.delimiterClass + headerConfig.mobileMod));
-
-        this._headerList.classList.remove(headerConfig.listClass + headerConfig.mobileMod);
-
-        this._headerNav.classList.remove(headerConfig.navClass + headerConfig.mobileMod);
-    }
-
-    _hideLogo() {
-        document
-            .querySelector(`.${headerConfig.logoClass}`)
-            .classList.add(headerConfig.logoClass + headerConfig.mobileMod);
-    }
-
-    _showLogo() {
-        document
-            .querySelector(`.${headerConfig.logoClass}`)
-            .classList.remove(headerConfig.logoClass + headerConfig.mobileMod);
-    }
-
-    _showCloseBtn() {
-        document
-            .querySelector(`.${headerConfig.closeBtnClass}`).
-            classList.add(headerConfig.closeBtnClass + headerConfig.mobileMod);
-    }
-
-    _hideCloseBtn() {
-        document
-            .querySelector(`.${headerConfig.closeBtnClass}`).
-            classList.remove(headerConfig.closeBtnClass + headerConfig.mobileMod);
-    }
-
     _hideMenu() {
         this._hideCloseBtn();
         this._hideLinks();
         this._showLogo();
         this._showBurger();
+    }
+
+    _showBurger() {
+        this._burgerBtn.classList.remove(headerConfig.hidingClass);
+    }
+
+    _hideBurger() {
+        this._burgerBtn.classList.add(headerConfig.hidingClass);
+    }    
+
+    _showLinks() {
+        this._nav.classList.add(headerConfig.visibleBlockClass);
+    }
+
+    _hideLinks() {
+        this._nav.classList.remove(headerConfig.visibleBlockClass);
+    }
+
+    _showLogo() {
+        this._logo.classList.remove(headerConfig.hidingClass);
+    }
+
+    _hideLogo() {
+        this._logo.classList.add(headerConfig.hidingClass);
+    }
+
+    _showCloseBtn() {
+        this._closeBtn.classList.remove(headerConfig.hidingClass);
+    }
+
+    _hideCloseBtn() {
+        this._closeBtn.classList.add(headerConfig.hidingClass);
     }
 }
