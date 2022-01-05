@@ -1,9 +1,9 @@
-import { persons } from "../utils/constants.js";
+import { teamConfig, persons } from "../utils/constants.js";
 
 export class Team {
     constructor() {
-        this._teamCards = document.querySelector('.team__cards');
-        this._cardTemplate = document.querySelector('#team__card');
+        this._teamCards = document.querySelector(teamConfig.cardsContainerSel);
+        this._cardTemplate = document.querySelector(teamConfig.cardTemplateSel);
     }
 
     render() {
@@ -16,12 +16,13 @@ export class Team {
 
     _createCard(item) {
         const card = this._cardTemplate.content.cloneNode(true);
-        const photo = card.querySelector('.team__photo');
 
+        const photo = card.querySelector(teamConfig.cardPhotoSel);
         photo.src = item.photo;
         photo.alt = item.name + " photo";
-        card.querySelector('.team__name').textContent = item.name;
-        card.querySelector('.team__position').textContent = item.position;
+        
+        card.querySelector(teamConfig.cardNameSel).textContent = item.name;
+        card.querySelector(teamConfig.cardPositionSel).textContent = item.position;
 
         return card;
     }

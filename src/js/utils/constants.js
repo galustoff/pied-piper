@@ -10,6 +10,14 @@ export const headerConfig = {
     closeBtnClass: 'header__close-btn',
 };
 
+export const teamConfig = {
+    cardsContainerSel: '.team__cards',
+    cardTemplateSel: '#team__card',
+    cardPhotoSel: '.team__photo',
+    cardNameSel: '.team__name',
+    cardPositionSel: '.team__position',
+};
+
 export const persons = [
     {
         photo: './vendor/images/richard.png',
