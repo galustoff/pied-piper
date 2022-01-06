@@ -23,11 +23,7 @@
     &__list
         letter-spacing: 0.3px
         display: flex
-        flex-direction: column
-
-    @media screen and (min-width: 810px)
-        &__list
-            display: block
+        flex-direction: column    
 
     &__list-item
         display: inline-block
@@ -38,10 +34,6 @@
     
     &__delimiter
         display: none
-    
-    @media screen and (min-width: 810px)
-        &__delimiter
-            display: inline
 
     &__burger-btn
         width: 45px
@@ -50,10 +42,6 @@
         flex-direction: column
         justify-content: space-between
         cursor: pointer
-
-    @media screen and (min-width: 810px)
-        &__burger-btn
-            display: none
 
     &__burger-btn-line
         height: 6px
@@ -75,6 +63,14 @@
 
     &__close-btn-square
         background-color: $green
+
+    @media screen and (min-width: 810px)
+        &__list
+            display: block
+        &__delimiter
+            display: inline
+        &__burger-btn
+            display: none
 
     /*keep this records last in page!!!
     &__hidden-element
