@@ -7,34 +7,59 @@ export class Header {
         this._logo = this._header.querySelector(`.${headerConfig.logoClass}`);
         this._burgerBtn = this._header.querySelector(`.${headerConfig.burgerBtnClass}`);
         this._closeBtn = this._header.querySelector(`.${headerConfig.closeBtnClass}`);
+
+        this._switchToMobile = () => {
+            const dde = document.documentElement;
+
+            if (dde.clientWidth < 810) {
+                this._setMobileView();
+                window.removeEventListener('resize', this._switchToMobile);
+                window.addEventListener('resize', this._switchToDesktop);
+            }
+        };
+
+        this._switchToDesktop = () => {
+            const dde = document.documentElement;
+
+            if (dde.clientWidth > 810) {
+                this._setDesktopView();
+                window.removeEventListener('resize', this._switchToDesktop);
+                window.addEventListener('resize', this._switchToMobile);
+            }
+        };
+
+        this._openMenu = () => {
+            this._hideBurger();
+            this._hideLogo();
+            this._showNav();
+            this._showCloseBtn();
+        };
+
+        this._hideMenu = () => {
+            this._hideCloseBtn();
+            this._hideNav();
+            this._showLogo();
+            this._showBurger();
+        };
     }
 
     init() {
-        this._setHandlers();
+        if (document.documentElement.clientWidth < 810) {
+            this._setMobileView();
+            window.addEventListener('resize', this._switchToDesktop);
+        } else {
+            window.addEventListener('resize', this._switchToMobile);
+        }
     }
 
-    _setHandlers() {
-        this._burgerBtn.addEventListener("click", () => {
-            this._showMenu();
-        });
-
-        this._closeBtn.addEventListener("click", () => {
-            this._hideMenu();
-        });
+    _setMobileView() {
+        this._nav.classList.add(headerConfig.hidingClass);
+        this._burgerBtn.addEventListener('click', this._openMenu);
     }
 
-    _showMenu() {
-        this._hideBurger();
-        this._hideLogo();
-        this._showLinks();
-        this._showCloseBtn();
-    }
-
-    _hideMenu() {
-        this._hideCloseBtn();
-        this._hideLinks();
-        this._showLogo();
-        this._showBurger();
+    _setDesktopView() {
+        this._nav.classList.remove(headerConfig.hidingClass);
+        this._burgerBtn.removeEventListener('click', this._openMenu);
     }
 
     _showBurger() {
@@ -43,14 +68,15 @@ export class Header {
 
     _hideBurger() {
         this._burgerBtn.classList.add(headerConfig.hidingClass);
+        this._burgerBtn.removeEventListener('click', this._openMenu);
     }    
 
-    _showLinks() {
-        this._nav.classList.add(headerConfig.visibleBlockClass);
+    _showNav() {
+        this._nav.classList.remove(headerConfig.hidingClass);
     }
 
-    _hideLinks() {
-        this._nav.classList.remove(headerConfig.visibleBlockClass);
+    _hideNav() {
+        this._nav.classList.add(headerConfig.hidingClass);
     }
 
     _showLogo() {
@@ -63,9 +89,11 @@ export class Header {
 
     _showCloseBtn() {
         this._closeBtn.classList.remove(headerConfig.hidingClass);
+        this._closeBtn.addEventListener('click', this._hideMenu);
     }
 
     _hideCloseBtn() {
         this._closeBtn.classList.add(headerConfig.hidingClass);
+        this._closeBtn.removeEventListener('click', this._hideMenu);
     }
 }

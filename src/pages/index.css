@@ -108,19 +108,6 @@ ul {
   width: 184px;
   height: 45px;
 }
-@media screen and (min-width: 810px) {
-  .header__logo-wrapper {
-    display: block;
-  }
-}
-.header__nav {
-  display: none;
-}
-@media screen and (min-width: 810px) {
-  .header__list {
-    display: block;
-  }
-}
 .header__list {
   letter-spacing: 0.3px;
   display: flex;
@@ -177,16 +164,8 @@ ul {
   cursor: pointer;
   align-self: flex-start;
 }
-@media screen and (min-width: 810px) {
-  .header__close-btn {
-    display: none;
-  }
-}
 .header__close-btn-square {
   background-color: #007765;
-}
-.header__visible-block {
-  display: block;
 }
 .header__hidden-element {
   display: none;
