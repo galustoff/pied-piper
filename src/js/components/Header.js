@@ -53,23 +53,31 @@ export class Header {
     }
 
     _setMobileView() {
-        this._nav.classList.add(headerConfig.hidingClass);
-        this._burgerBtn.addEventListener('click', this._openMenu);
+        this._hideNav();
+        this._showBurger();
     }
 
     _setDesktopView() {
-        this._nav.classList.remove(headerConfig.hidingClass);
-        this._burgerBtn.removeEventListener('click', this._openMenu);
+        this._hideCloseBtn();
+        this._showLogo();
+        this._showNav();
+        this._restoreBurgerInitialState();
     }
 
     _showBurger() {
         this._burgerBtn.classList.remove(headerConfig.hidingClass);
+        this._burgerBtn.addEventListener('click', this._openMenu);
     }
 
     _hideBurger() {
         this._burgerBtn.classList.add(headerConfig.hidingClass);
         this._burgerBtn.removeEventListener('click', this._openMenu);
     }    
+
+    _restoreBurgerInitialState() {
+        this._burgerBtn.removeEventListener('click', this._openMenu);
+        this._burgerBtn.classList.remove(headerConfig.hidingClass);
+    }
 
     _showNav() {
         this._nav.classList.remove(headerConfig.hidingClass);
