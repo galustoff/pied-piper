@@ -29,17 +29,21 @@ export class Header {
         };
 
         this._openMenu = () => {
-            this._hideBurger();
-            this._hideLogo();
-            this._showNav();
-            this._showCloseBtn();
+            this._hideElem(this._burgerBtn);
+            this._burgerBtn.removeEventListener('click', this._openMenu);
+            this._hideElem(this._logo);
+            this._showElem(this._nav);
+            this._showElem(this._closeBtn);
+            this._closeBtn.addEventListener('click', this._hideMenu);
         };
 
         this._hideMenu = () => {
-            this._hideCloseBtn();
-            this._hideNav();
-            this._showLogo();
-            this._showBurger();
+            this._hideElem(this._closeBtn);
+            this._closeBtn.removeEventListener('click', this._hideMenu);
+            this._hideElem(this._nav);
+            this._showElem(this._logo);
+            this._showElem(this._burgerBtn);
+            this._burgerBtn.addEventListener('click', this._openMenu);
         };
     }
 
@@ -53,55 +57,28 @@ export class Header {
     }
 
     _setMobileView() {
-        this._hideNav();
-        this._showBurger();
-    }
-
-    _setDesktopView() {
-        this._hideCloseBtn();
-        this._showLogo();
-        this._showNav();
-        this._restoreBurgerInitialState();
-    }
-
-    _showBurger() {
-        this._burgerBtn.classList.remove(this._hidingClass);
+        this._hideElem(this._nav);
+        this._showElem(this._burgerBtn);
         this._burgerBtn.addEventListener('click', this._openMenu);
     }
 
-    _hideBurger() {
-        this._burgerBtn.classList.add(this._hidingClass);
-        this._burgerBtn.removeEventListener('click', this._openMenu);
-    }    
+    _setDesktopView() {
+        this._hideElem(this._closeBtn);
+        this._showElem(this._logo);
+        this._showElem(this._nav);
+        this._restoreBurgerInitialState();
+    }
+
+    _showElem(elem) {
+        elem.classList.remove(this._hidingClass);
+    }
+
+    _hideElem(elem) {
+        elem.classList.add(this._hidingClass);
+    }
 
     _restoreBurgerInitialState() {
         this._burgerBtn.removeEventListener('click', this._openMenu);
         this._burgerBtn.classList.remove(this._hidingClass);
-    }
-
-    _showNav() {
-        this._nav.classList.remove(this._hidingClass);
-    }
-
-    _hideNav() {
-        this._nav.classList.add(this._hidingClass);
-    }
-
-    _showLogo() {
-        this._logo.classList.remove(this._hidingClass);
-    }
-
-    _hideLogo() {
-        this._logo.classList.add(this._hidingClass);
-    }
-
-    _showCloseBtn() {
-        this._closeBtn.classList.remove(this._hidingClass);
-        this._closeBtn.addEventListener('click', this._hideMenu);
-    }
-
-    _hideCloseBtn() {
-        this._closeBtn.classList.add(this._hidingClass);
-        this._closeBtn.removeEventListener('click', this._hideMenu);
     }
 }
