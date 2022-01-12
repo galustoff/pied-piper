@@ -104,6 +104,9 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+.header__container_mobile-view {
+  padding: 16px 43px 15px;
+}
 .header__logo-wrapper {
   width: 184px;
   height: 45px;

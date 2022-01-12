@@ -5,12 +5,14 @@ export class Header {
         this._dde = document.documentElement;
 
         this._header = document.querySelector(headerConfig.headerSel);
+        this._cont = this._header.querySelector(headerConfig.contSel);
         this._nav = this._header.querySelector(headerConfig.navSel);
         this._logo = this._header.querySelector(headerConfig.logoSel);
         this._burgerBtn = this._header.querySelector(headerConfig.burgerBtnSel);
         this._closeBtn = this._header.querySelector(headerConfig.closeBtnSel);
 
         this._hidingClass = headerConfig.hidingClass;
+        this._contMobileClass = headerConfig.contMobileClass;
 
         this._switchToMobile = () => {
             if (this._dde.clientWidth < 810) {
@@ -31,6 +33,7 @@ export class Header {
         this._openMenu = () => {
             this._hideElem(this._burgerBtn);
             this._burgerBtn.removeEventListener('click', this._openMenu);
+            this._cont.classList.add(this._contMobileClass);
             this._hideElem(this._logo);
             this._showElem(this._nav);
             this._showElem(this._closeBtn);
@@ -41,6 +44,7 @@ export class Header {
             this._hideElem(this._closeBtn);
             this._closeBtn.removeEventListener('click', this._hideMenu);
             this._hideElem(this._nav);
+            this._cont.classList.remove(this._contMobileClass);
             this._showElem(this._logo);
             this._showElem(this._burgerBtn);
             this._burgerBtn.addEventListener('click', this._openMenu);
@@ -66,6 +70,7 @@ export class Header {
         this._hideElem(this._closeBtn);
         this._showElem(this._logo);
         this._showElem(this._nav);
+        this._cont.classList.remove(this._contMobileClass);
         this._restoreBurgerInitialState();
     }
 
