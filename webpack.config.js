@@ -6,7 +6,7 @@ module.exports = {
     entry: "./src/js/index.js",
     devServer: {
         static: {
-            directory: path.resolve(__dirname, "dist"),
+            directory: path.resolve(__dirname, "docs"),
         },
     },
     output: {
@@ -31,6 +31,16 @@ module.exports = {
                     },
                     "sass-loader",
                 ],
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"],
+                    },
+                },
             },
         ],
     },

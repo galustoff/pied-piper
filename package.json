@@ -29,7 +29,10 @@
     },
     "homepage": "https://github.com/galustoff/pied-piper#readme",
     "devDependencies": {
+        "@babel/core": "^7.17.5",
+        "@babel/preset-env": "^7.16.11",
         "autoprefixer": "^10.4.2",
+        "babel-loader": "^8.2.3",
         "css-loader": "^6.5.1",
         "html-loader": "^3.1.0",
         "html-webpack-plugin": "^5.5.0",
