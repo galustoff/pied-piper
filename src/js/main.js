@@ -1,6 +1,4 @@
-import "../sass/index.sass";
-import { Header } from "./components/layout/header";
+import header from "./sections/header/header.js";
 
-const header = new Header();
+header.append();
 
-header.render();

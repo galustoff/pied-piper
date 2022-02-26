@@ -1,0 +1,113 @@
+$green: #007765
+$white: #fff
+$light-gray: #eee
+$dark-gray: #333
+$black: #000
+
+$f-fsz: 18px
+$f-lh: 1.185em
+
+$regular: 400
+$medium: 500
+$bold: 700
+
+$cont-max-width: 1220px
+$side-padding: 55px
+
+$h2-fsz: 64px
+$h2-lh: 1.172em
+
+$p-fsz: 32px
+$p-lh: 1.172em
+
+$header-padding-top: 20px
+$header-padding-bottom: 19px
+$header-max-content-height: 45px
+
+$header-height: $header-padding-top + $header-max-content-height + $header-padding-bottom
+    
+    
+    
+    
+.header
+    background-color: $green
+    color: $white
+    font-weight: $medium
+    font-size: 24px
+    line-height: 28px
+    letter-spacing: 0.01em
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 1
+
+    &__container
+        padding-top: $header-padding-top
+        padding-bottom: $header-padding-bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &_mobile-view
+            padding: 15px 43px
+
+    &__logo-wrapper
+        width: 184px
+        height: 45px
+
+    &__list
+        letter-spacing: 0.3px
+        display: flex
+        flex-direction: column    
+
+    &__list-item
+        display: inline-block
+
+    &__link
+        color: inherit
+        text-decoration: none
+    
+    &__delimiter
+        display: none
+
+    &__burger-btn
+        width: 45px
+        height: 35px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        cursor: pointer
+
+    &__burger-btn-line
+        height: 6px
+        border-radius: 2px
+        background-color: $light-gray
+
+    &__close-btn
+        width: 45px
+        height: 45px
+        background-color: $light-gray
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        grid-gap: 5px
+        transform: rotate(45deg)
+        border-radius: 50%
+        cursor: pointer
+        align-self: flex-start
+
+    &__close-btn-square
+        background-color: $green
+
+    @media screen and (min-width: 810px)
+        &__list
+            display: block
+        &__delimiter
+            display: inline
+        &__burger-btn
+            display: none
+
+    /*keep this records last in page!!!
+    &__hidden-element
+        display: none
