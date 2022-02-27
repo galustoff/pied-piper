@@ -1,0 +1,26 @@
+@import ../../../common/styles/variables
+    
+.pipercoin
+    background-color: $white
+
+
+    &__container
+        padding-top: 47px
+        padding-bottom: 52.5px
+
+
+    &__logo-wrapper
+        float: left
+        margin-right: 48px
+        width: 115px
+        height: 115px
+
+    &__h2
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+@media screen and (min-width: 520px)
+    .pipercoin__h2
+        overflow: visible
+        white-space: normal
