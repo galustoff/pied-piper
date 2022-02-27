@@ -2,11 +2,11 @@ import { getElementFrom } from "../../utils/utils.js";
 
 export class SectionCreator {
     constructor(html) {
-        this._body = document.body;
+        this._container = document.body.querySelector('.main');
         this._element = getElementFrom(html);
     }
 
-    append() {
-        this._body.append(this._element);
+    render() {
+        this._container.append(this._element);
     }
 }
