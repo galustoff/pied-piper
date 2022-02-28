@@ -1,18 +1,18 @@
-import { headerConfig } from "../utils/constants.js";
+import { headerConfig as config } from "./headerConfig.js";
 
-export class Header {
+export default class HeaderController {
     constructor() {
         this._dde = document.documentElement;
 
-        this._header = document.querySelector(headerConfig.headerSel);
-        this._cont = this._header.querySelector(headerConfig.contSel);
-        this._nav = this._header.querySelector(headerConfig.navSel);
-        this._logo = this._header.querySelector(headerConfig.logoSel);
-        this._burgerBtn = this._header.querySelector(headerConfig.burgerBtnSel);
-        this._closeBtn = this._header.querySelector(headerConfig.closeBtnSel);
+        this._header = document.querySelector(config.headerSel);
+        this._cont = this._header.querySelector(config.contSel);
+        this._nav = this._header.querySelector(config.navSel);
+        this._logo = this._header.querySelector(config.logoSel);
+        this._burgerBtn = this._header.querySelector(config.burgerBtnSel);
+        this._closeBtn = this._header.querySelector(config.closeBtnSel);
 
-        this._hidingClass = headerConfig.hidingClass;
-        this._contMobileClass = headerConfig.contMobileClass;
+        this._hidingClass = config.hidingClass;
+        this._contMobileClass = config.contMobileClass;
 
         this._switchToMobile = () => {
             if (this._dde.clientWidth < 810) {
@@ -53,7 +53,6 @@ export class Header {
 
     init() {
         if (document.documentElement.clientWidth < 810) {
-            this._setMobileView();
             window.addEventListener('resize', this._switchToDesktop);
         } else {
             window.addEventListener('resize', this._switchToMobile);
