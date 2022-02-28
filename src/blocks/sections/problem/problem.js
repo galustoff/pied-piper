@@ -1,7 +1,5 @@
-import { SectionCreator } from "../../../components/SectionCreator/SectionCreator.js";
-import html from "./problem.html";
 import "./problem.sass";
+import html from "./problem.html";
+import { getElementFrom } from "../../../utils/utils.js";
 
-const problem = new SectionCreator(html);
-
-export default problem;
+document.querySelector(".main").append(getElementFrom(html));

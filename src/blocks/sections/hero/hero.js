@@ -1,7 +1,5 @@
-import { SectionCreator } from "../../../components/SectionCreator/SectionCreator.js";
-import html from "./hero.html";
 import "./hero.sass";
+import html from "./hero.html";
+import { getElementFrom } from "../../../utils/utils.js";
 
-const hero = new SectionCreator(html);
-
-export default hero;
+document.querySelector(".main").append(getElementFrom(html));

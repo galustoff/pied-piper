@@ -1,7 +1,11 @@
-import { HeaderCreator } from "../../components/HeaderCreator/HeaderCreator.js";
-import headerHTML from "./header.html";
 import "./header.sass";
+import { getElementFrom } from "../../utils/utils.js";
+import html from "./header.html";
 
-const header = new HeaderCreator(headerHTML);
+const header = getElementFrom(html);
 
-export default header;
+if (document.documentElement.clientWidth < 810) {
+    header.querySelector('.header__nav').classList.add('header__hidden-element');
+}
+
+document.body.prepend(header);

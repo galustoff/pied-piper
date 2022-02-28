@@ -1,7 +1,5 @@
-import { SectionCreator } from "../../../components/SectionCreator/SectionCreator.js";
-import html from "./jumbotron.html";
 import "./jumbotron.sass";
+import html from "./jumbotron.html";
+import { getElementFrom } from "../../../utils/utils.js";
 
-const jumbotron = new SectionCreator(html);
-
-export default jumbotron;
+document.querySelector('.main').append(getElementFrom(html));

@@ -1,7 +1,5 @@
-import { SectionCreator } from "../../../components/SectionCreator/SectionCreator.js";
-import html from "./pipercoin.html";
 import "./pipercoin.sass";
+import html from "./pipercoin.html";
+import { getElementFrom } from "../../../utils/utils.js";
 
-const pipercoin = new SectionCreator(html);
-
-export default pipercoin;
+document.querySelector(".main").append(getElementFrom(html));
