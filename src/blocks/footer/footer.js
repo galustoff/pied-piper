@@ -1,7 +1,5 @@
-import { FooterCreator } from "../../components/FooterCreator/FooterCreator.js";
-import html from "./footer.html";
 import "./footer.sass";
+import html from "./footer.html";
+import { getElementFrom } from "../../utils/utils.js";
 
-const footer = new FooterCreator(html);
-
-export default footer;
+document.body.append(getElementFrom(html));
