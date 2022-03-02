@@ -32,26 +32,22 @@ export default class HeaderController {
 
         this._openMenu = () => {
             this._hideElem(this._burgerBtn);
-            this._burgerBtn.removeEventListener('click', this._openMenu);
-            this._burgerBtn.removeEventListener('touchstart', this._openMenu);
+            this._burgerBtn.removeEventListener('mousedown', this._openMenu);
             this._cont.classList.add(this._contMobileClass);
             this._hideElem(this._logo);
             this._showElem(this._nav);
             this._showElem(this._closeBtn);
-            this._closeBtn.addEventListener('click', this._hideMenu);
-            this._closeBtn.addEventListener('touchstart', this._hideMenu);
+            this._closeBtn.addEventListener('mousedown', this._hideMenu);
         };
 
         this._hideMenu = () => {
             this._hideElem(this._closeBtn);
-            this._closeBtn.removeEventListener('click', this._hideMenu);
-            this._closeBtn.removeEventListener('touchstart', this._hideMenu);
+            this._closeBtn.removeEventListener('mousedown', this._hideMenu);
             this._hideElem(this._nav);
             this._cont.classList.remove(this._contMobileClass);
             this._showElem(this._logo);
             this._showElem(this._burgerBtn);
-            this._burgerBtn.addEventListener('click', this._openMenu);
-            this._burgerBtn.addEventListener('touchstart', this._openMenu);
+            this._burgerBtn.addEventListener('mousedown', this._openMenu);
         };
     }
 
@@ -66,8 +62,7 @@ export default class HeaderController {
     _setMobileView() {
         this._hideElem(this._nav);
         this._showElem(this._burgerBtn);
-        this._burgerBtn.addEventListener('click', this._openMenu);
-        this._burgerBtn.addEventListener('touchstart', this._openMenu);
+        this._burgerBtn.addEventListener('mousedown', this._openMenu);
     }
 
     _setDesktopView() {
@@ -87,8 +82,7 @@ export default class HeaderController {
     }
 
     _restoreBurgerInitialState() {
-        this._burgerBtn.removeEventListener('click', this._openMenu);
-        this._burgerBtn.removeEventListener('touchstart', this._openMenu);
+        this._burgerBtn.removeEventListener('mousedown', this._openMenu);
         this._burgerBtn.classList.remove(this._hidingClass);
     }
 }
