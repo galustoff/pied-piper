@@ -32,22 +32,22 @@ export default class HeaderController {
 
         this._openMenu = () => {
             this._hideElem(this._burgerBtn);
-            this._burgerBtn.removeEventListener('mousedown', this._openMenu);
+            this._burgerBtn.removeEventListener('pointerdown', this._openMenu);
             this._cont.classList.add(this._contMobileClass);
             this._hideElem(this._logo);
             this._showElem(this._nav);
             this._showElem(this._closeBtn);
-            this._closeBtn.addEventListener('mousedown', this._hideMenu);
+            this._closeBtn.addEventListener('pointerdown', this._hideMenu);
         };
 
         this._hideMenu = () => {
             this._hideElem(this._closeBtn);
-            this._closeBtn.removeEventListener('mousedown', this._hideMenu);
+            this._closeBtn.removeEventListener('pointerdown', this._hideMenu);
             this._hideElem(this._nav);
             this._cont.classList.remove(this._contMobileClass);
             this._showElem(this._logo);
             this._showElem(this._burgerBtn);
-            this._burgerBtn.addEventListener('mousedown', this._openMenu);
+            this._burgerBtn.addEventListener('pointerdown', this._openMenu);
         };
     }
 
@@ -62,7 +62,7 @@ export default class HeaderController {
     _setMobileView() {
         this._hideElem(this._nav);
         this._showElem(this._burgerBtn);
-        this._burgerBtn.addEventListener('mousedown', this._openMenu);
+        this._burgerBtn.addEventListener('pointerdown', this._openMenu);
     }
 
     _setDesktopView() {
@@ -82,7 +82,7 @@ export default class HeaderController {
     }
 
     _restoreBurgerInitialState() {
-        this._burgerBtn.removeEventListener('mousedown', this._openMenu);
+        this._burgerBtn.removeEventListener('pointerdown', this._openMenu);
         this._burgerBtn.classList.remove(this._hidingClass);
     }
 }
