@@ -54,6 +54,7 @@ export default class HeaderController {
     init() {
         if (document.documentElement.clientWidth < 810) {
             window.addEventListener('resize', this._switchToDesktop);
+            this._burgerBtn.addEventListener('pointerdown', this._openMenu);
         } else {
             window.addEventListener('resize', this._switchToMobile);
         }
