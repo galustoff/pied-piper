@@ -1,8 +1,8 @@
 import { hidingClass } from "../constants.js";
 
 export default class HidingElement {
-    constructor(selector) {
-        this._element = document.querySelector(selector);
+    constructor(container, selector) {
+        this._element = container.querySelector(selector);
         this._hidingClass = hidingClass;
     }
 

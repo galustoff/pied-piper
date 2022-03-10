@@ -9,6 +9,10 @@ module.exports = {
         path: path.resolve(__dirname, "docs"),
         clean: true,
     },
+    devtool: "inline-source-map",
+    devServer: {
+        static: "./docs",
+    },
     module: {
         rules: [
             {
