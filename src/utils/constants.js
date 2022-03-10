@@ -1,1 +1,1 @@
-export const hiddenClass = "header__hidden-element";
+export const hidingClass = "header__hidden-element";
