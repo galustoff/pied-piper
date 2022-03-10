@@ -1,6 +1,6 @@
 import { hidingClass } from "../constants.js";
 
-export class HidingElement {
+export default class HidingElement {
     constructor(selector) {
         this._element = document.querySelector(selector);
         this._hidingClass = hidingClass;

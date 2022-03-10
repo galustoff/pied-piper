@@ -1,11 +1,12 @@
 import "./header.sass";
 import { getElementFrom } from "../../utils/utils.js";
 import html from "./header.html";
+import HeaderController from "../../utils/components/HeaderController.js";
 
 const header = getElementFrom(html);
+/*
+const headerController = new HeaderController(header);
 
-if (document.documentElement.clientWidth < 810) {
-    header.querySelector(config.navSel).classList.add(config.hidingClass);
-}
-
+headerController.init();
+*/
 document.body.prepend(header);

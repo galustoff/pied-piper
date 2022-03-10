@@ -1,15 +1,26 @@
-import { headerConfig as config } from "./headerConfig.js";
+import { headerConfig as config } from "../constants.js";
+import HidingElement from "./HidingElement.js";
+import HeaderButton from "./HeaderButton.js";
 
 export default class HeaderController {
-    constructor() {
+    constructor(header) {
         this._dde = document.documentElement;
 
-        this._header = document.querySelector(config.headerSel);
+        this._header = header;
         this._cont = this._header.querySelector(config.contSel);
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        this._nav = new HidingElement(config.navSel);
+        this._logo = new HidingElement(config.logoSel);
+        this._burgerBtn = new HeaderButton(config.burgerBtnSel);
+        this._closeBtn = new HeaderButton(config.closeBtnSel);
+
+        /*
         this._nav = this._header.querySelector(config.navSel);
         this._logo = this._header.querySelector(config.logoSel);
         this._burgerBtn = this._header.querySelector(config.burgerBtnSel);
         this._closeBtn = this._header.querySelector(config.closeBtnSel);
+        */
 
         this._hidingClass = config.hidingClass;
         this._contMobileClass = config.contMobileClass;
@@ -54,7 +65,7 @@ export default class HeaderController {
     init() {
         if (document.documentElement.clientWidth < 810) {
             window.addEventListener('resize', this._switchToDesktop);
-            this._burgerBtn.addEventListener('pointerdown', this._openMenu);
+            this._setMobileView();
         } else {
             window.addEventListener('resize', this._switchToMobile);
         }

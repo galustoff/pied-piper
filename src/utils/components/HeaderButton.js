@@ -1,6 +1,6 @@
 import { HidingElement } from "./HidingElement.js";
 
-export class HeaderButton extends HidingElement {
+export default class HeaderButton extends HidingElement {
     constructor(selector, action) {
         super(selector);
         this._action = action;
