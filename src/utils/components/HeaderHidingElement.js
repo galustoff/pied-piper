@@ -1,9 +1,9 @@
-import { hidingClass } from "../constants.js";
+import { headerConfig } from "../constants.js";
 
-export default class HidingElement {
+export default class HeaderHidingElement {
     constructor(container, selector) {
         this._element = container.querySelector(selector);
-        this._hidingClass = hidingClass;
+        this._hidingClass = headerConfig.hidingClass;
     }
 
     show() {

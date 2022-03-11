@@ -1,5 +1,5 @@
 import { headerConfig as config } from "../constants.js";
-import HidingElement from "./HidingElement.js";
+import HeaderHidingElement from "./HeaderHidingElement.js";
 import HeaderButton from "./HeaderButton.js";
 
 export default class HeaderController {
@@ -7,12 +7,8 @@ export default class HeaderController {
         this._dde = document.documentElement;
 
         this._header = header;
-
-        this._cont = this._header.querySelector(config.contSel);
-        this._contMobileClass = config.contMobileClass;
-
-        this._nav = new HidingElement(this._header, config.navSel);
-        this._logo = new HidingElement(this._header, config.logoSel);
+        this._nav = new HeaderHidingElement(this._header, config.navSel);
+        this._logo = new HeaderHidingElement(this._header, config.logoSel);
         this._burgerBtn = new HeaderButton(
             this._header,
             config.burgerBtnSel,
@@ -51,7 +47,6 @@ export default class HeaderController {
     };
 
     _setMobileView = () => {
-        this._cont.classList.add(this._contMobileClass);
         this._nav.hide();
         this._closeBtn.hide();
         this._burgerBtn.show();
@@ -62,7 +57,6 @@ export default class HeaderController {
         this._burgerBtn.hide();
         this._logo.show();
         this._nav.show();
-        this._cont.classList.remove(this._contMobileClass);
     }
 
     _openMenu = () => {
