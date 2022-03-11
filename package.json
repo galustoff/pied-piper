@@ -4,10 +4,9 @@
     "description": "training project",
     "private": true,
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "npx webpack --mode production",
-        "dev": "npx webpack --mode development",
-        "start": "npx webpack serve --mode production --open",
+        "build": "export NODE_ENV=production && webpack",
+        "dev": "export NODE_ENV=development && webpack",
+        "start": "export NODE_ENV=development && webpack serve --open",
         "fire": "firefox ./docs/index.html &"
     },
     "repository": {

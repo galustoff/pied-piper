@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 
+const isDev = process.env.NODE_ENV === "development";
+
 module.exports = {
     entry: "./src/main.js",
     output: {
@@ -9,7 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, "docs"),
         clean: true,
     },
-    devtool: "inline-source-map",
+    devtool: isDev ? "inline-source-map" : false,
     devServer: {
         static: "./docs",
     },
