@@ -4,11 +4,18 @@
     margin-bottom: 37.5px
     color: $black
     font-weight: $regular
-    font-size: $p-fsz
+    font-size: 24px
     line-height: $p-lh
+    text-align: center
 
     &_text-style_italic
         font-style: italic
 
     &_text-style_strong
         font-weight: $bold
+
+@media screen and ( min-width: 340px )
+    .paragraph
+        font-size: 32px
+        text-align: left
+    

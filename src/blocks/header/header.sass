@@ -40,21 +40,21 @@
         display: none
 
     &__burger-btn
-        width: 35px
-        height: 30px
+        width: 28px
+        height: 26px
         display: flex
         flex-direction: column
         justify-content: space-between
         cursor: pointer
 
     &__burger-btn-line
-        height: 6px
+        height: 4px
         border-radius: 2px
         background-color: $light-gray
 
     &__close-btn
-        width: 40px
-        height: 40px
+        width: 34px
+        height: 34px
         background-color: $light-gray
         display: grid
         grid-template-columns: 1fr 1fr
@@ -72,6 +72,17 @@
     &__hidden-element
         display: none
 
+    @media screen and ( min-width: 360px )
+        &__burger-btn
+            width: 35px
+            height: 30px
+        &__burger-btn-line
+            height: 6px
+        &__close-btn
+            width: 40px
+            height: 40px
+    
+
 @media screen and (min-width: 810px)
     .header
         font-size: 24px
@@ -83,9 +94,3 @@
             display: block
         &__delimiter
             display: inline
-        &__burger-btn
-            width: 45px
-            height: 33px
-        &__close-btn
-            width: 45px
-            height: 45px

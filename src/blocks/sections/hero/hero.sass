@@ -7,13 +7,20 @@
 
     &__container
         max-width: 1000px
-        padding: 128px 56px 130px 54px
+        padding: 64px 15px
 
 
     &__text
         color: $white
         font-weight: $medium
         font-style: italic
-        font-size: 48px
+        font-size: 30px
         line-height: 1.172em
         text-align: center
+    
+    @media screen and ( min-width: 440px )
+        &__container
+            padding: 128px 56px 130px 54px
+        &__text
+            font-size: 48px
+        

@@ -6,13 +6,22 @@
     background-position: center center
 
     &__container
-        padding-top: 161px
-        padding-bottom: 159px
-        padding-right: 74px
+        padding-top: 80px
+        padding-bottom: 80px
 
     &__heading
         color: $white
         text-align: center
         font-weight: $medium
-        font-size: 72px
-        line-height: 83px
+        font-size: 50px
+        line-height: 66px
+    
+    @media screen and ( min-width: 440px )
+        &__container
+            padding-top: 161px
+            padding-bottom: 159px
+            padding-right: 74px
+        &__heading
+            font-size: 72px
+            line-height: 83px
+        
