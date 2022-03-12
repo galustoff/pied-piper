@@ -27,6 +27,7 @@ export default class HeaderController {
             this._setMobileView();
             window.addEventListener("resize", this._switchToDesktop);
         } else {
+            this._setDesktopView();
             window.addEventListener("resize", this._switchToMobile);
         }
     }
@@ -40,7 +41,7 @@ export default class HeaderController {
     };
 
     _switchToDesktop = () => {
-        if (this._dde.clientWidth > 810) {
+        if (this._dde.clientWidth >= 810) {
             this._setDesktopView();
             window.removeEventListener("resize", this._switchToDesktop);
             window.addEventListener("resize", this._switchToMobile);

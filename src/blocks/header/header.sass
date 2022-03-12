@@ -4,8 +4,8 @@
     background-color: $green
     color: $white
     font-weight: $medium
-    font-size: 24px
-    line-height: 28px
+    font-size: 22px
+    line-height: 26px
     letter-spacing: 0.01em
     position: fixed
     top: 0
@@ -14,12 +14,15 @@
     z-index: 1
 
     &__container
-        padding-top: 6px
-        padding-bottom: 6px
+        padding-top: 10px
+        padding-bottom: 10px
         display: flex
         justify-content: space-between
         align-items: center
 
+    &__logo-wrapper
+        display: block
+        line-height: 0
 
     &__list
         letter-spacing: 0.3px
@@ -37,8 +40,8 @@
         display: none
 
     &__burger-btn
-        width: 45px
-        height: 33px
+        width: 35px
+        height: 30px
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -50,8 +53,8 @@
         background-color: $light-gray
 
     &__close-btn
-        width: 45px
-        height: 45px
+        width: 40px
+        height: 40px
         background-color: $light-gray
         display: grid
         grid-template-columns: 1fr 1fr
@@ -65,7 +68,14 @@
     &__close-btn-square
         background-color: $green
 
-    @media screen and (min-width: 810px)
+    /*keep it last!!!
+    &__hidden-element
+        display: none
+
+@media screen and (min-width: 810px)
+    .header
+        font-size: 24px
+        line-height: 28px
         &__container
             padding-top: 20px
             padding-bottom: 19px
@@ -73,7 +83,9 @@
             display: block
         &__delimiter
             display: inline
-
-    /*keep this records last in page!!!
-    &__hidden-element
-        display: none
+        &__burger-btn
+            width: 45px
+            height: 33px
+        &__close-btn
+            width: 45px
+            height: 45px
