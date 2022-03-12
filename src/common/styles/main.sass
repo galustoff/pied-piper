@@ -1,10 +1,16 @@
 @import variables
     
 .main
-    padding-top: 53px
+    padding-top: $label-sm
     background-color: $green
+    font-size: 24px
+    line-height: 1.172em
+
+@media screen and (min-width: 340px)
+    .main
+        font-size: 32px
 
 @media screen and (min-width: 810px)
     .main
-        padding-top: 84px
+        padding-top: $label-lg
     
