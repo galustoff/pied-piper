@@ -1,6 +1,7 @@
 import { headerConfig as config } from "../constants.js";
 import HeaderHidingElement from "./HeaderHidingElement.js";
 import HeaderButton from "./HeaderButton.js";
+import HeaderNav from "./HeaderNav.js";
 
 export default class HeaderController {
     constructor(header) {
@@ -8,8 +9,8 @@ export default class HeaderController {
 
         this._header = header;
         this._headerImg = header.querySelector(config.imgSel);
-        this._nav = new HeaderHidingElement(this._header, config.navSel);
         this._logo = new HeaderHidingElement(this._header, config.logoSel);
+        this._nav = new HeaderNav(this._header, config.navSel, this._closeMenu);
         this._burgerBtn = new HeaderButton(
             this._header,
             config.burgerBtnSel,
