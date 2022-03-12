@@ -7,6 +7,7 @@ export default class HeaderController {
         this._dde = document.documentElement;
 
         this._header = header;
+        this._headerImg = header.querySelector(config.imgSel);
         this._nav = new HeaderHidingElement(this._header, config.navSel);
         this._logo = new HeaderHidingElement(this._header, config.logoSel);
         this._burgerBtn = new HeaderButton(
@@ -47,29 +48,41 @@ export default class HeaderController {
     };
 
     _setMobileView = () => {
+        this._setMobileSizes();
         this._nav.hide();
         this._closeBtn.hide();
         this._burgerBtn.show();
-    }
+    };
 
     _setDesktopView = () => {
+        this._setDesktopSizes();
         this._closeBtn.hide();
         this._burgerBtn.hide();
         this._logo.show();
         this._nav.show();
-    }
+    };
+
+    _setMobileSizes = () => {
+        this._headerImg.width = 138;
+        this._headerImg.height = 33;
+    };
+
+    _setDesktopSizes = () => {
+        this._headerImg.width = 184;
+        this._headerImg.height = 45;
+    };
 
     _openMenu = () => {
         this._logo.hide();
         this._nav.show();
         this._burgerBtn.hide();
         this._closeBtn.show();
-    }
+    };
 
     _closeMenu = () => {
         this._nav.hide();
         this._logo.show();
         this._closeBtn.hide();
         this._burgerBtn.show();
-    }
+    };
 }

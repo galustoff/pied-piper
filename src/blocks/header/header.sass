@@ -14,15 +14,12 @@
     z-index: 1
 
     &__container
-        padding-top: $header-padding-top
-        padding-bottom: $header-padding-bottom
+        padding-top: 6px
+        padding-bottom: 6px
         display: flex
         justify-content: space-between
         align-items: center
 
-    &__logo-wrapper
-        width: 184px
-        height: 45px
 
     &__list
         letter-spacing: 0.3px
@@ -41,7 +38,7 @@
 
     &__burger-btn
         width: 45px
-        height: 35px
+        height: 33px
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -69,6 +66,9 @@
         background-color: $green
 
     @media screen and (min-width: 810px)
+        &__container
+            padding-top: 20px
+            padding-bottom: 19px
         &__list
             display: block
         &__delimiter
