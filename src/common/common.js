@@ -1,5 +1,7 @@
 import "./common.sass";
 
+document.documentElement.lang = "en";
+
 document.body.classList.add("page");
 
 const main = document.createElement("main");
