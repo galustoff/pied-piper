@@ -52,7 +52,7 @@
 
 * **Pixel Perfect:** проверяется на разрешении 1219px, скриншот макета для  
 проверки наложением лежит в *src/vendor/images/tests*
-* **Google Page Speed:** ***100%***, скриншот теста также в *src/vendor/images/tests*
+* **Google Page Speed:** ***100% / 92% моб***, скриншоты тестов также в *src/vendor/images/tests*
 * **W3C:** полностью валидный html без ошибок, скриншот там же - *src/vendor/images/tests*
 
 ## Контакты
