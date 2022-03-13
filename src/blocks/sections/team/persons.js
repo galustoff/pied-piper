@@ -1,9 +1,9 @@
-import richardPhoto from "./images/richard.png";
-import dineshPhoto from "./images/dinesh.png";
-import gilfoylePhoto from "./images/gilfoyle.png";
-import jaredPhoto from "./images/jared.png";
-import monicaPhoto from "./images/monica.png";
-import headPhoto from "./images/head.png";
+import richardPhoto from "./images/richard.webp";
+import dineshPhoto from "./images/dinesh.webp";
+import gilfoylePhoto from "./images/gilfoyle.webp";
+import jaredPhoto from "./images/jared.webp";
+import monicaPhoto from "./images/monica.webp";
+import headPhoto from "./images/head.webp";
 
 export const persons = [
     {
